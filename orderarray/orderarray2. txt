@@ -1,0 +1,20 @@
+1. Take item in array
+2. Compare to all items
+3. If equal item, then place it inside a subarray
+4. If not equal, then compare to next item
+5. If no item is equal, then push it to array
+
+Tip: sort array
+
+
+What I'm telling my program to do:
+
+1. sort array in ascending order
+2. Take item in array
+3. Add item to Subarray
+4. start comparing item to other items in original array
+5. If item equals to next item, push next item into sub array, otherwise, empty sub array
+6. repeat step 4 and 5 until no more items are left to compare to
+7. if subarray is not empty then push it into new array repeat all the way from step 2 until no more items are left to take
+8. return array
+
