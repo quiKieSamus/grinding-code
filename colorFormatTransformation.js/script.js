@@ -17,149 +17,127 @@ const colorFormatTransformation = (color) => {
                 }
 
             }
-            
-            let HexToRGB = 0;
-            hexPairs
-            for (let i = 0; i < hexPairs.length; i++) {
-                switch (i) {
-                    case 1:
-                        switch (hexPairs[i]) {
-                            case '0':
-                                HexToRGB = 0;
 
-                                break;
-                            case '1':
-                                HexToRGB = 1;
-
-                                break;
-                            case 2:
-                                HexToRGB = 2;
-
-                                break;
-                            case 3:
-                                HexToRGB = 3;
-
-                                break;
-                            case 4:
-                                HexToRGB = 4;
-
-                                break;
-                            case 5:
-                                HexToRGB = 5;
-
-                                break;
-                            case 6:
-                                HexToRGB = 6;
-
-                                break;
-                            case 7:
-                                HexToRGB = 7;
-                                break;
-                            case 8:
-                                HexToRGB = 8;
-
-                                break;
-                            case 9:
-                                HexToRGB = 9;
-
-                                break;
-                            case 'A':
-                                HexToRGB = 10;
-
-                                break;
-                            case 'B':
-                                HexToRGB = 11;
-
-                                break;
-                            case 'C':
-                                HexToRGB = 12;
-
-                                break;
-                            case 'D':
-                                HexToRGB = 13;
-
-                                break;
-                            case E:
-                                HexToRGB = 14;
-
-                                break;
-                            case F:
-                                HexToRGB = 15;
-
-                                break;
-                        }
+            //helper function to calculate hex to rgb to invoke
+            const HexToRGB = (a, b) => {
+                let result = 0;
+                let b1 = b;
+                const HexToRGB2 = (b = b1) => {
+                    switch (b) {
+                        case '0':
+                            result += 0;
+                            break;
+                        case '1':
+                            result += 1;
+                            break;
+                        case '2':
+                            result += 2;
+                            break;
+                        case '3':
+                            result += 3;
+                            break;
+                        case '4':
+                            result += 4;
+                            break;
+                        case '5':
+                            result += 5;
+                            break;
+                        case '6':
+                            result += 6;
+                            break;
+                        case '7':
+                            result += 7; 
+                            break;
+                        case '8':
+                            result += 8;
+                            break;
+                        case '9':
+                            result += 9;
+                            break;
+                        case 'A':
+                            result += 10;
+                            break;
+                        case 'B':
+                            result += 11;
+                            break;
+                        case 'C':
+                            result += 12;
+                            break;
+                        case 'D':
+                            result += 13;
+                            break;
+                        case 'E':
+                            result += 14;
+                            break;
+                        case 'F':
+                            result += 15;
+                            break;
+                    }    
+                    return result;
+                }
+                switch (a) {
+                    case '0':
+                        result += 0;
                         break;
-
-                    case 2:
-                        switch (hexPairs[i]) {
-                            case '0':
-                                HexToRGB += 0;
-
-                                break;
-                            case '1':
-                                HexToRGB += 1;
-
-                                break;
-                            case 2:
-                                HexToRGB += 2;
-
-                                break;
-                            case 3:
-                                HexToRGB += 3;
-
-                                break;
-                            case 4:
-                                HexToRGB += 4;
-
-                                break;
-                            case 5:
-                                HexToRGB += 5;
-
-                                break;
-                            case 6:
-                                HexToRGB += 6;
-
-                                break;
-                            case 7:
-                                HexToRGB += 7;
-                                break;
-                            case 8:
-                                HexToRGB += 8;
-
-                                break;
-                            case 9:
-                                HexToRGB += 9;
-
-                                break;
-                            case 'A':
-                                HexToRGB += 10;
-
-                                break;
-                            case 'B':
-                                HexToRGB += 11;
-
-                                break;
-                            case 'C':
-                                HexToRGB += 12;
-
-                                break;
-                            case 'D':
-                                HexToRGB += 13;
-
-                                break;
-                            case E:
-                                HexToRGB += 14;
-
-                                break;
-                            case F:
-                                HexToRGB += 15;
-
-                                break;
-                        }
+                    case '1':
+                        result = 1 * 16 + HexToRGB2();
+                        break;
+                    case '2':
+                        result = 2 * 16 + HexToRGB2();
+                        break;
+                    case '3':
+                        result = 3 * 16 + HexToRGB2();
+                        break;
+                    case '4':
+                        result = 4 * 16 + HexToRGB2();
+                        break;
+                    case '5':
+                        result = 5 * 16 + HexToRGB2();
+                        break;
+                    case '6':
+                        result = 6 * 16 + HexToRGB2();
+                        break;
+                    case '7':
+                        result = 7 * 16 + HexToRGB2();
+                        break;
+                    case '8':
+                        result = 8 * 16 + HexToRGB2();
+                        break;
+                    case '9':
+                        result = 9 * 16 + HexToRGB2();
+                        break;
+                    case 'A':
+                        result = 10 * 16 + HexToRGB2();
+                        break;
+                    case 'B':
+                        result = 11 * 16 + HexToRGB2();
+                        break;
+                    case 'C':
+                        result = 12 * 16 + HexToRGB2();
+                        break;
+                    case 'D':
+                        result = 13 * 16 + HexToRGB2();
+                        break;
+                    case 'E':
+                        result =  14 * 16 + HexToRGB2();
+                        break;
+                    case 'F':
+                        result =  15 * 16 + HexToRGB2();
                         break;
                 }
-                
+                return result;
             }
+            hexPairs;
+            let hexResult = [];
+            for (let i = 0; i < hexPairs.length; i++) {
+                for (let j = 0; j < hexPairs[i].length-1; j++) {
+                    hexResult.push(HexToRGB(hexPairs[i][j], hexPairs[i][j+1]));
+
+                }
+            }
+
+            return `RGB(${hexResult[0]}, ${hexResult[1]}, ${hexResult[2]})`
+            
         }
         else {
 
@@ -336,6 +314,6 @@ const colorFormatTransformation = (color) => {
     }
 }
 
-console.log(colorFormatTransformation("#ABCDEF"));
+console.log(colorFormatTransformation("#AAAAAA"));
 
 
