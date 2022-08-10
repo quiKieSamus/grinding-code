@@ -1,16 +1,14 @@
 // Question 3: Write a function that converts HEX to RGB. Then Make that function auto-dect the formats so that if you enter HEX color format it returns RGB and if you enter RGB color format it returns HEX.
 
-const colorFormatTransformation = (color) => {
+export const colorFormatTransformation = (color) => {
     if (color[0] === '#') {
         let colorNoHashtag = color.replace('#', '');
-        colorNoHashtag;
 
         let hexPairs = [];
         if (colorNoHashtag.length === 6) {
             let hexPair = '';
             for (let i = 0; i < colorNoHashtag.length; i++) {
                 hexPair += colorNoHashtag[i];
-                hexPair
                 if (hexPair.length === 2) {
                     hexPairs.push(hexPair);
                     hexPair = '';
@@ -77,7 +75,7 @@ const colorFormatTransformation = (color) => {
                 }
                 switch (a) {
                     case '0':
-                        result += 0;
+                        result += 0 + HexToRGB2();
                         break;
                     case '1':
                         result = 1 * 16 + HexToRGB2();
@@ -127,7 +125,6 @@ const colorFormatTransformation = (color) => {
                 }
                 return result;
             }
-            hexPairs;
             let hexResult = [];
             for (let i = 0; i < hexPairs.length; i++) {
                 for (let j = 0; j < hexPairs[i].length-1; j++) {
@@ -140,7 +137,7 @@ const colorFormatTransformation = (color) => {
             
         }
         else {
-
+            
         }
     }
     else {
@@ -180,7 +177,7 @@ const colorFormatTransformation = (color) => {
         //end of quoted code
         let RgbToHex = "#";
         const turnToHEX = (intPart, decPart) => {
-            decimalPart = decPart;
+            let decimalPart = decPart;
             const turnToHEXDecPart = (decPart = decimalPart) => {
                 switch (decPart) {
                     case 0:
@@ -301,9 +298,7 @@ const colorFormatTransformation = (color) => {
         }
         for (let i = 0; i < listOfNumbersToConvert.length; i++) {
             let first = listOfNumbersToConvert[i] / 16;
-            first;
             let second = listOfNumbersToConvert[i] % 16;
-            second;
             integerPart.push(truncate(first, 0));
             remainderPart.push(second);
             turnToHEX(integerPart[i], remainderPart[i]);
@@ -313,7 +308,5 @@ const colorFormatTransformation = (color) => {
 
     }
 }
-
-console.log(colorFormatTransformation("#AAAAAA"));
 
 
