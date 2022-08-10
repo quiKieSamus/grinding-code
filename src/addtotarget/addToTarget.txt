@@ -1,0 +1,6 @@
+1. Take item in array
+2. Take next item
+3. Add them
+4. If it gives the number then return the items, otherwise repeat  with other items, if the sum was not met, then no addition with the items will give the number
+
+
