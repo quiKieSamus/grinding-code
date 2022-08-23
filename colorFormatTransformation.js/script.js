@@ -310,3 +310,4 @@ export const colorFormatTransformation = (color) => {
 }
 
 
+console.log(colorFormatTransformation("190,24,10"))
