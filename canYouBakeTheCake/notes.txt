@@ -6,3 +6,10 @@ Examples:
 cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); 
 // must return 0
 cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}); 
+
+
+1. get recipe properties
+2. get recipe properties quantities
+3. check yourIngredients to see if you have the necessary ingredients for the recipe 
+4. if you have every ingredient then, check yourIngredients to see if you have the necessary quantities for each required Ingredient
+5. if you have everything needed for the baking, then, check to see how many cakes can you make (yourIngredient - recipe ingredient)
