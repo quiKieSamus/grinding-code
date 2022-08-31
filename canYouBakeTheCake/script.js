@@ -6,40 +6,53 @@ const cakes = (recipe, yourIngredients) => {
     let haveAllIngredients = false;
     let min;
     for (let i = 0; i < recipeLength; i++) {
-        const checkedIngredient = yourIngredientsPropArray[i];
+        const checkedIngredient = recipePropArray[i];
+        if (recipe[checkedIngredient] === 0) {
+            delete recipe[checkedIngredient];
+            delete yourIngredients[checkedIngredient];
+            c++
+        }
         for (let j = 0; j < recipeLength; j++) {
             if (checkedIngredient === recipePropArray[j] && recipe[checkedIngredient] <= yourIngredients[checkedIngredient]){
                 c++;
             }
+
             if (c === recipeLength) {
                 haveAllIngredients = true;
                 break;
             }
         }
     }
-
     if (haveAllIngredients === true) {
         let usedResources = [];
         for (let i = 0; i < recipeLength; i++) {
-            const checkedIngredient1 = recipePropArray[i];
+            const checkedIngredient1 = Object.keys(recipe)[i];
             for (let j = 0; j < yourIngredientsPropArray.length; j++) {
                 if (checkedIngredient1 === yourIngredientsPropArray[j]) {
-                    usedResources.push(yourIngredients[checkedIngredient1]/recipe[yourIngredientsPropArray[j]]);
-                    usedResources.sort((a, b) => a - b)
+                    let ingredientsDivision = yourIngredients[checkedIngredient1]/recipe[yourIngredientsPropArray[j]];
+                    usedResources.push(ingredientsDivision);
+                    usedResources.sort((a, b) => a - b);
+                    
                 }
             }
-            min = usedResources[i];
-            for (let i = 0; i < usedResources.length; i++) {
-                if (min >= usedResources[i]) {
-                    min = usedResources[i];
-                }
-            }
-
+            min = usedResources[0];
+            usedResources
+            
+            // for (let i = 0; i < usedResources.length; i++) {
+            //     if (typeof min === 'undefined') {
+            //         min = usedResources[0];
+            //     }
+            //     if (min >= usedResources[i]) {
+            //         min = usedResources[i];
+            //         min
+                    
+            //     }
+            // }
         } 
     } else {
-        return "You can't even make a single cake"       
+        return 0;       
     }
-    return `Yo can make ${Math.round(min)} cakes`;
-}
+    return min;
+} 
 
-console.log(cakes({flour: 500, sugar: 200, egg: 15, chocolate: 30}, {flour: 5000000, sugar: 2000000, egg: 150000, chocolate: 110}));
+console.log(cakes({apples: 3, flour: 300, milk: 100, oil: 100, chocolate: 0}, {apples:3, oil:300, flour: 2000, milk: 300}));
