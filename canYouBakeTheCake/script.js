@@ -52,7 +52,19 @@ const cakes = (recipe, yourIngredients) => {
     } else {
         return 0;       
     }
-    return min;
+    const truncate = (number, index) => //function to truncate decimals without rounding 
+    {
+        //if and else statements added by quiKieSamus
+        if (number.toString().length !== 1) {
+            return +number.toString().slice(0, (number.toString().indexOf(".")) + (index + 0));
+        }
+        else {
+            return number
+        }
+        // cutting the number
+
+    }
+    return truncate(min, 0);
 } 
 
-console.log(cakes({apples: 3, flour: 300, milk: 100, oil: 100, chocolate: 0}, {apples:3, oil:300, flour: 2000, milk: 300}));
+console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1000, sugar: 1000, eggs: 3, milk: 200}));

@@ -1,0 +1,6 @@
+Here are some ideas of exercises that come up to me:
+
+Embroidery Machine Operator Work Time & Statistics: Make an alorithm that outputs the time & statistics of an embroidery machine operator worker. (idea in progress)
+
+
+
