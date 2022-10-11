@@ -9,11 +9,11 @@ const generateHashtag = (str) => {
             if (fragmentsOfText.length === 1) {
                 fragmentsOfText = fragmentsOfText.toUpperCase();
             }
-            fragmentsOfText
+            
         } else {
             strToReturn += fragmentsOfText;
             fragmentsOfText = "";
-            strToReturn
+            
         }
          
  

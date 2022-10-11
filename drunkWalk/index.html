@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borracho</title>
+</head>
+
+<body>
+    <h1>Simulación de Monte Carlo</h1>
+    <div class="container">
+        <h3>Algoritmo:</h3>
+        <ol>
+            <li>Inicializar X, Y y N (Número de cuadras caminadas) en 0</li>
+            <li>Obtener un número aleatorio R (probabilidad de la dirección) de dos dígitos</li>
+            <li>Evaluar el valor de R</li>
+            <ul>
+                <li>Si R es mayor o igual a 0 y menor que 25, incrementar Y en uno.</li>
+                <li>Si R es mayor o igual a 25 y menor que 50, decrementar Y en uno.</li>
+                <li>Si R es mayor o igual a 50 y menor que 75, incrementar X en uno.</li>
+                <li>Si R es mayor o igual a 75 y menor que 100, decrementar X en uno.</li>
+            </ul>
+            <li>Incrementar el número de cuadras caminadas (N)</li>
+            <li>Imprimir los valores X y Y</li>
+            <li>Repetir los pasos 2 a 5 hasta que N sea igual a 10</li>
+            <li>Sumar X y Y, para obtener la posición en donde se encuentra después de caminar 10 cuadras</li>
+            <li>Si el valor absoluto de la suma resulta mayor o igual a 2, entonces se toma como éxito. En caso contrario se toma como fracaso.</li>
+        </ol>
+        <p>Para una mejor comprensión del algoritmo expuesto, recomiendo el siguiente artículo que está <a href="https://simulacionutp2016.wordpress.com/2016/09/17/simulacion-monte-carlo/">acá</a></p>
+    </div>
+
+    <div class="container">
+        <p>Presione el siguiente botón para ejecutar la simulación:</p>
+        <button id="btn" style="width: 100px; height: 30px; border: none; background-color:black;color:white;">Ejecutar</button> <br>
+        <span class="values"></span>
+        <span class="result"></span>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
