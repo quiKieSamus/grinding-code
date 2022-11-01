@@ -1,0 +1,20 @@
+Se requiere de una Aplicación que empleando el Método de Monte Carlo permita darle solución a la siguiente integral simple:  
+
+
+
+integral de 2 a 3 de 3x2+2x dx                                 
+
+                        
+El método de Monte Carlo permite valiéndose del manejo de números aleatorios resolver problemas matemáticos simples y complejos.
+La aplicación podrá desarrollarse en cualquier lenguaje de programación y/o herramienta informática que esté a su alcance.
+Como interfaz de entrada se deberá:
+Ingresar solamente el número de simulaciones
+Como interfaz de salida se deberá especificar:
+Resultado Matemático de la integral. (4085)
+Resultado Aproximado de la Integral por el método de Monte Carlo.
+Porcentaje (%) de error entre valor real (matemático) y el valor aproximado obtenido de la simulación.
+
+Asesorías en horas de clase. 
+
+
+     
