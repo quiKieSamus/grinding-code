@@ -32,5 +32,5 @@ const montecarlo = (n) => {
         nearValuesListLength: nearValues.length
     };
 
-    return obj_result.nearValuesListLength;
+    return obj_result;
 }
