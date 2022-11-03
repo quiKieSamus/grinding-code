@@ -3,14 +3,17 @@ const g = (x) => {
 }
 
 const montecarlo = (g, a, b, m) => {
+    //theorical result
     const mathResult = 24;
 
     let s = 0;
 
+    //sum of f(xi)
     for (let i = 0; i < m; i++) {
         s += g(a + (b-a) * Math.random());
     }
 
+    //main formula
     let result = ((b-a)/m)*s;
 
     const obj_result = {
@@ -18,10 +21,12 @@ const montecarlo = (g, a, b, m) => {
         monteCarloResult: result,
         errorMargin: Math.abs((mathResult - result) / (mathResult*100)) 
     };
-
+    //test
     return obj_result;
 }
 
+
+//page display
 const btnProcess = document.getElementById("btn-process");
 const input = document.getElementById('sim-total');
 
