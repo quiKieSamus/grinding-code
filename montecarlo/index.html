@@ -7,6 +7,31 @@
     <title>Montecarlo para Integrales</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Resolviendo integrales por Montecarlo</h1>
+
+        <div class="process">
+            <div>
+                <label for="sim-num">Ingrese Número de Simulaciones</label>
+                <input type="number" min="1" id="sim-total">
+                <input type="submit" value="PROCESAR" id="btn-process">
+            </div>
+
+            <div class="results">
+                <div>
+                    El resultado teórico es:
+                    <span class="math-result"></span>
+                </div>
+
+                <div>
+                    El resultado aproximado es:
+                    <span class="monte-carlo"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

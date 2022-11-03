@@ -1,36 +1,36 @@
-const montecarlo = (n) => {
-    const mathResult = 4085;
-    const b = 3;
-    const a = 2;
-    let randomNumbers = []; //getting random numbers
-    for (let i = 0; i < n; i++) {
-        randomNumbers.push(Math.random() * 6);
+const g = (x) => {
+    return((3*Math.pow(x, 2))+ (2*x));
+}
+
+const montecarlo = (g, a, b, m) => {
+    const mathResult = 24;
+
+    let s = 0;
+
+    for (let i = 0; i < m; i++) {
+        s += g(a + (b-a) * Math.random());
+        console.log(s)
     }
 
-    let evalRandNuminFunction = []; //this array will contain all random numbers evaluated in f(x)
-    for (let i = 0; i < randomNumbers.length; i++) {
-        evalRandNuminFunction.push(3 * (Math.pow(randomNumbers[i], 2 + (2 * randomNumbers[i]))));
-    }
-
-    let approxResults = [];
-    for (let i = 0; i < evalRandNuminFunction.length; i++) {
-        approxResults.push(((b - a) / evalRandNuminFunction.length) * evalRandNuminFunction[i]);
-    }
-
-    let nearValues = [];
-    for (let i = 0; i < approxResults.length; i++) {
-        if (approxResults[i] <= (mathResult + 100) && approxResults[i] >= (mathResult - 100)) {
-            nearValues.push(approxResults[i]);
-        }
-    }
+    let result = ((b-a)/m)*s;
 
     const obj_result = {
         mathResult: mathResult,
-        approxResultsList: approxResults,
-        randomNumbersList: randomNumbers,
-        nearValuesList: nearValues,
-        nearValuesListLength: nearValues.length
+        monteCarloResult: result
     };
 
     return obj_result;
 }
+
+const btnProcess = document.getElementById("btn-process");
+const input = document.getElementById('sim-total');
+
+btnProcess.addEventListener('click', () => {
+    const realResElm = document.querySelector(".math-result");
+    const montResElm = document.querySelector(".monte-carlo");
+    const result = montecarlo(g, 2, 3, input.value);
+    console.log(result)
+    realResElm.innerHTML = result.mathResult;
+    montResElm.innerHTML = result.monteCarloResult;
+
+});

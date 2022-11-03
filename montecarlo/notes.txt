@@ -10,7 +10,7 @@ La aplicación podrá desarrollarse en cualquier lenguaje de programación y/o h
 Como interfaz de entrada se deberá:
 Ingresar solamente el número de simulaciones
 Como interfaz de salida se deberá especificar:
-Resultado Matemático de la integral. (4085)
+Resultado Matemático de la integral. (24)
 Resultado Aproximado de la Integral por el método de Monte Carlo.
 Porcentaje (%) de error entre valor real (matemático) y el valor aproximado obtenido de la simulación.
 
