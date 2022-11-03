@@ -19,12 +19,13 @@ const montecarlo = (g, a, b, m) => {
     const obj_result = {
         mathResult: mathResult,
         monteCarloResult: result,
-        errorMargin: Math.abs((mathResult - result) / (mathResult*100)) 
+        errorMargin: Math.abs((mathResult - result) / (mathResult*100)).toFixed(6) 
     };
     //test
     return obj_result;
 }
 
+console.log(montecarlo(g, 2, 3, 1000));
 
 //page display
 const btnProcess = document.getElementById("btn-process");
