@@ -9,14 +9,14 @@ const montecarlo = (g, a, b, m) => {
 
     for (let i = 0; i < m; i++) {
         s += g(a + (b-a) * Math.random());
-        console.log(s)
     }
 
     let result = ((b-a)/m)*s;
 
     const obj_result = {
         mathResult: mathResult,
-        monteCarloResult: result
+        monteCarloResult: result,
+        errorMargin: Math.abs((mathResult - result) / (mathResult*100)) 
     };
 
     return obj_result;
@@ -28,9 +28,12 @@ const input = document.getElementById('sim-total');
 btnProcess.addEventListener('click', () => {
     const realResElm = document.querySelector(".math-result");
     const montResElm = document.querySelector(".monte-carlo");
+    const errMargElm = document.querySelector(".error-margin");
+    
     const result = montecarlo(g, 2, 3, input.value);
-    console.log(result)
     realResElm.innerHTML = result.mathResult;
     montResElm.innerHTML = result.monteCarloResult;
+    errMargElm.innerHTML = result.errorMargin;
+    
 
 });
