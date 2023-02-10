@@ -1,0 +1,10 @@
+Entradas:
+cantidad de jugadores
+cantidad de cartas a dar a cada uno de los jugadores
+
+proceso:
+revolver cartas y repartir
+
+salida:
+cantidad de cartas que faltaron si es que faltan
+Mostrar todas las cartas que recibieron cada jugador
