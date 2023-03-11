@@ -1,0 +1,4 @@
+self-explanatory
+
+number between 1-3999
+Only valid romans are passed in to the function (there will be no IIII XILI)

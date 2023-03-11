@@ -94,7 +94,6 @@ class Player {
 
 const poker = (numberOfPlayers, numberOfCardsToGiveToEachPlayer) => {
     const fullDeck = Card.randomizeDeck(Card.makeSingleFullDeck());
-    console.log(fullDeck);
     let deckToOnePlayer = [];
     let players = [];
     for (let i = 0; i < numberOfPlayers; i++) {
@@ -113,4 +112,4 @@ const poker = (numberOfPlayers, numberOfCardsToGiveToEachPlayer) => {
     };
 };
 
-console.log(poker(5, 3));
+console.log(poker(5, 3).listOfPlayers);
