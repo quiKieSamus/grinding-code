@@ -24,12 +24,11 @@ const hexToRGB = (components) => {
         const separatedValues = component.split('');
         const hexToRgbParts = separatedValues.map((part, index, arr) => {
             const value = chartHexToRgb(part);
-            console.log(value);
-            if (!value) console.log("Un numero no es correcto");
-            const decimalConversion = Math.pow(part * 16, arr.length-index);
+            if (value === false) console.log("Un numero no es correcto");
+            const decimalConversion = value * Math.pow(16, arr.length - (index + 1));
             return decimalConversion;
         });
-        return hexToRgbParts
+        return hexToRgbParts.reduce((acc, next) => acc + next, 0);
     });
     return values;
 }
@@ -70,4 +69,5 @@ const chartHexToRgb = (data) => {
     return parseInt(data);
 }
 
-console.log(hexToRGB(["7A", "BC", "30"]));
+console.log(hexToRGB(["1B", "1C", "1D"]));
+console.log(rgbToHex([123, 223, 255]));
