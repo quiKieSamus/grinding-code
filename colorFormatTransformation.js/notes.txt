@@ -8,8 +8,8 @@ To turn RGB color to hex, work with each of the three components separately. Div
 
 https://appkong.com/wp-content/uploads/2021/12/Снимок-экрана-2021-12-21-в-14.18.01-e1640089653630.png
 
-As you can see, 12 is C, while 9 is also 9. As a result, this color is expressed in hex as #C9 __.
+As you can see, 12 is C, while 9 is also 9. As a result, this color is expressed in hex as #C9.
 
-Next, divide the second number by 16, too: 20/16 = 1 + 0.25. The remainder must also be multiplied by 16, which gives 4 (0.25*16). Now you know that the code looks like #C914__.
+Next, divide the second number by 16, too: 20/16 = 1 + 0.25. The remainder must also be multiplied by 16, which gives 4 (0.25*16). Now you know that the code looks like #C914.
 
 Repeat the same division and multiplication for the third value (60). In this example, 60/16 = 3 + 0.75, while the remainder multiplied by 16 gives 12. Thus, the full code is #C9143C.
