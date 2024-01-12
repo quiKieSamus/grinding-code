@@ -1,4 +1,3 @@
-// Returns number of complete beeramid levels
 const beeramid = (bonus, price) => {
   let beerTotal = bonus/price - 1;
   if (beerTotal < 1 && bonus !== price) return 0;
