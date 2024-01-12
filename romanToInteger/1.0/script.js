@@ -44,3 +44,5 @@
     
     return number;
 }
+
+console.log(romanToInt("IXXX"));
